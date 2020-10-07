@@ -59,7 +59,12 @@ class Component(KBCEnvHandler):
             new_columns.append('row_number')
 
             outputFilename = '%s/%s' % (self.tables_out_path, self.get_input_tables_definitions()[0].file_name)
-            self.configuration.write_table_manifest(outputFilename, primary_key=['row_number'], incremental=True, columns=new_columns)
+            self.configuration.write_table_manifest( 
+                outputFilename,
+                primary_key=['row_number'],
+                incremental=True,
+                columns=new_columns 
+            )
 
             with CachedOrthogonalDictWriter(outputFilename, new_columns) as writer:
                 for index, l in enumerate(reader):
