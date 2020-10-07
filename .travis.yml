@@ -22,6 +22,8 @@ jobs:
     - stage: deploy
       if: branch = main
       script: "./deploy.sh"
+      on:
+        tags: true
 
 
 before_script:
