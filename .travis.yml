@@ -17,7 +17,7 @@ jobs:
       #  - docker push $REPOSITORY:test
       #  - docker pull quay.io/keboola/syrup-cli:latest
     - stage: deploy_dev_portal
-      if: branch = master
+      if: branch = main
       script: "./scripts/update_dev_portal_properties.sh"
     - stage: deploy
       if: tag IS present AND  branch = master
