@@ -20,7 +20,7 @@ jobs:
       if: branch = main
       script: "./scripts/update_dev_portal_properties.sh"
     - stage: deploy
-      if: tag IS present AND  branch = master
+      if: tag IS present AND  branch = main
       script: "./deploy.sh"
 
 
