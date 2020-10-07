@@ -15,7 +15,7 @@ KEY_DEBUG = 'debug'
 MANDATORY_PARS = []
 MANDATORY_IMAGE_PARS = []
 
-APP_VERSION = '0.0.1'
+APP_VERSION = '1.1.3'
 
 
 class Component(KBCEnvHandler):
