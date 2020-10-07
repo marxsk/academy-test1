@@ -1,5 +1,4 @@
 import csv
-import json
 from pathlib import Path
 from datetime import datetime
 
@@ -17,6 +16,7 @@ MANDATORY_PARS = []
 MANDATORY_IMAGE_PARS = []
 
 APP_VERSION = '0.0.1'
+
 
 class Component(KBCEnvHandler):
     def __init__(self, debug=False):
@@ -50,7 +50,7 @@ class Component(KBCEnvHandler):
 
         print('Running...')
         state = self.get_state_file()
-        print ('Last update: %s' % state.get('last_update'))
+        print('Last update: %s' % state.get('last_update'))
 
         with open(self.get_input_tables_definitions()[0].full_path, 'r') as input:
             reader = csv.DictReader(input)
@@ -74,6 +74,7 @@ class Component(KBCEnvHandler):
         # state = {'last_update': datetime.utcnow().timestamp()}
 
         self.write_state_file(state)
+
 
 """
         Main entrypoint
