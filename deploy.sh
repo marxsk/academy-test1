@@ -3,6 +3,7 @@ set -e
 
 env
 
+TRAVIS_TAG=1.3.1
 # compatibility with travis and bitbucket
 if [ ! -z ${BITBUCKET_TAG} ]
 then
