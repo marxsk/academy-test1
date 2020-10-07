@@ -61,6 +61,7 @@ class Component(KBCEnvHandler):
             outputFilename = '%s/%s' % (self.tables_out_path, self.get_input_tables_definitions()[0].file_name)
             self.configuration.write_table_manifest(
                 outputFilename,
+                destination='out.c-task.mytest',
                 primary_key=['row_number'],
                 incremental=True,
                 columns=new_columns
